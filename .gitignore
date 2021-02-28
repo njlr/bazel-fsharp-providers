@@ -1,0 +1,6 @@
+.ionide
+bazel-*
+bin
+obj
+packages
+.bazelrc
