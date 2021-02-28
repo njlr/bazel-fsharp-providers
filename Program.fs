@@ -1,7 +1,7 @@
 open FSharp.Data
 
 type private FooJson =
-  JsonProvider<"./foo.json", SampleIsList=true, InferTypesFromValues=true>
+  JsonProvider<"./foo.json", SampleIsList=false, InferTypesFromValues=true>
 
 [<EntryPoint>]
 let main argv =
