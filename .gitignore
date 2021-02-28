@@ -1,5 +1,7 @@
 .ionide
-bazel-*
+bazel-bin
+bazel-out
+bazel-testlogs
 bin
 obj
 packages
