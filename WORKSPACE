@@ -3,7 +3,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
   name = "io_bazel_rules_dotnet",
   remote = "https://github.com/bazelbuild/rules_dotnet",
-  branch = "master",
+  commit = "fde72a8be291dc6927eca361ba1661f983543c2e",
+  shallow_since = "1615139607 +0100"
 )
 
 load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
@@ -126,66 +127,15 @@ nuget_package(
     },
 )
 nuget_package(
-    name = "fable.core",
-    package = "fable.core",
-    version = "3.2.4",
-    core_lib = {
-        "netcoreapp2.0": "lib/netstandard2.0/Fable.Core.dll",
-        "netcoreapp2.1": "lib/netstandard2.0/Fable.Core.dll",
-        "netcoreapp2.2": "lib/netstandard2.0/Fable.Core.dll",
-        "netcoreapp3.0": "lib/netstandard2.0/Fable.Core.dll",
-        "netcoreapp3.1": "lib/netstandard2.0/Fable.Core.dll",
-    },
-    core_deps = {
-        "netcoreapp2.0": [
-           "@fsharp.core//:netcoreapp2.0_core",
-        ],
-        "netcoreapp2.1": [
-           "@fsharp.core//:netcoreapp2.1_core",
-        ],
-        "netcoreapp2.2": [
-           "@fsharp.core//:netcoreapp2.2_core",
-        ],
-        "netcoreapp3.0": [
-           "@fsharp.core//:netcoreapp3.0_core",
-        ],
-        "netcoreapp3.1": [
-           "@fsharp.core//:netcoreapp3.1_core",
-        ],
-    },
-    core_files = {
-        "netcoreapp2.0": [
-           "lib/netstandard2.0/Fable.Core.dll",
-           "lib/netstandard2.0/Fable.Core.xml",
-        ],
-        "netcoreapp2.1": [
-           "lib/netstandard2.0/Fable.Core.dll",
-           "lib/netstandard2.0/Fable.Core.xml",
-        ],
-        "netcoreapp2.2": [
-           "lib/netstandard2.0/Fable.Core.dll",
-           "lib/netstandard2.0/Fable.Core.xml",
-        ],
-        "netcoreapp3.0": [
-           "lib/netstandard2.0/Fable.Core.dll",
-           "lib/netstandard2.0/Fable.Core.xml",
-        ],
-        "netcoreapp3.1": [
-           "lib/netstandard2.0/Fable.Core.dll",
-           "lib/netstandard2.0/Fable.Core.xml",
-        ],
-    },
-)
-nuget_package(
     name = "fsharp.data",
     package = "fsharp.data",
-    version = "3.3.3",
+    version = "4.0.1",
     core_lib = {
-        "netcoreapp2.0": "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-        "netcoreapp2.1": "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-        "netcoreapp2.2": "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-        "netcoreapp3.0": "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-        "netcoreapp3.1": "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
+        "netcoreapp2.0": "lib/netstandard2.0/FSharp.Data.dll",
+        "netcoreapp2.1": "lib/netstandard2.0/FSharp.Data.dll",
+        "netcoreapp2.2": "lib/netstandard2.0/FSharp.Data.dll",
+        "netcoreapp3.0": "lib/netstandard2.0/FSharp.Data.dll",
+        "netcoreapp3.1": "lib/netstandard2.0/FSharp.Data.dll",
     },
     core_deps = {
         "netcoreapp2.0": [
@@ -206,36 +156,26 @@ nuget_package(
     },
     core_files = {
         "netcoreapp2.0": [
-           "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-           "lib/netstandard2.0/FSharp.Data.DesignTime.pdb",
            "lib/netstandard2.0/FSharp.Data.dll",
            "lib/netstandard2.0/FSharp.Data.pdb",
            "lib/netstandard2.0/FSharp.Data.xml",
         ],
         "netcoreapp2.1": [
-           "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-           "lib/netstandard2.0/FSharp.Data.DesignTime.pdb",
            "lib/netstandard2.0/FSharp.Data.dll",
            "lib/netstandard2.0/FSharp.Data.pdb",
            "lib/netstandard2.0/FSharp.Data.xml",
         ],
         "netcoreapp2.2": [
-           "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-           "lib/netstandard2.0/FSharp.Data.DesignTime.pdb",
            "lib/netstandard2.0/FSharp.Data.dll",
            "lib/netstandard2.0/FSharp.Data.pdb",
            "lib/netstandard2.0/FSharp.Data.xml",
         ],
         "netcoreapp3.0": [
-           "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-           "lib/netstandard2.0/FSharp.Data.DesignTime.pdb",
            "lib/netstandard2.0/FSharp.Data.dll",
            "lib/netstandard2.0/FSharp.Data.pdb",
            "lib/netstandard2.0/FSharp.Data.xml",
         ],
         "netcoreapp3.1": [
-           "lib/netstandard2.0/FSharp.Data.DesignTime.dll",
-           "lib/netstandard2.0/FSharp.Data.DesignTime.pdb",
            "lib/netstandard2.0/FSharp.Data.dll",
            "lib/netstandard2.0/FSharp.Data.pdb",
            "lib/netstandard2.0/FSharp.Data.xml",

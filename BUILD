@@ -5,7 +5,7 @@ fsharp_binary(
   srcs = [
     "Program.fs",
   ],
-  data = [
+  design_time_resources = [
     "foo.json",
   ],
   deps = [
